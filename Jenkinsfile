@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+        /*
         stage('build') {
             steps {
                 sh 'docker --version'
@@ -9,5 +10,11 @@ pipeline {
                 sh 'docker run -p 88:80 -d minha_image'
             }
         }
+        */
+        stage('deploy') {
+            steps {
+                sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"
+            }
+        }        
     }
 }
