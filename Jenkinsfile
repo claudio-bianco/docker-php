@@ -13,7 +13,7 @@ pipeline {
         */
         stage('deploy') {
             steps {
-                sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"
+                sh "${env.WORKSPACE}@script/script.sh"
             }
         }        
     }
