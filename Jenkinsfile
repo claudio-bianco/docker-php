@@ -12,8 +12,8 @@ pipeline {
         }
         */
         stage('deploy') {
-            steps {
-                sh "${env.WORKSPACE}@script/script.sh"
+            steps {                
+                sh ".script//my-script.sh"
             }
         }        
     }
